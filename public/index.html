@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dog Kombat</title>
+
+<style>
+body {
+    margin: 0;
+    background: radial-gradient(circle, #222, #000);
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+h1 { margin-top: 20px; }
+
+#score {
+    font-size: 40px;
+    margin: 10px;
+}
+
+#dog {
+    width: 220px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#dog:active {
+    transform: scale(0.9);
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background: red;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🐶 Dog Kombat</h1>
+
+<div id="score">Score: 0</div>
+
+<img id="dog" src="https://i.imgur.com/4M34hi2.png">
+
+<br>
+
+<button onclick="attack()">ATTACK 💥</button>
+
+<script>
+let score = 0;
+
+function attack() {
+    score += Math.floor(Math.random() * 10) + 1;
+    document.getElementById("score").innerText = "Score: " + score;
+}
+</script>
+
+</body>
+</html>
